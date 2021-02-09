@@ -1,0 +1,24 @@
+type Query {
+
+    ping:String!
+    messages:[Message!]!
+    message(id:ID):Message
+
+}
+
+type Message {
+
+    _id:ID
+    titulo:String!
+    contenido:String!
+    autor:String!
+
+}
+
+type Mutation {
+
+    createMessage(titulo:String!,contenido:String!,autor:String!):Message
+
+
+}
+    
